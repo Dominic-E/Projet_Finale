@@ -3,8 +3,8 @@
 <head>
   <style>
     body {
-      background: linear-gradient(-45deg, white, pink);
-      background-size: 200% 200%;
+      background: linear-gradient(-45deg, rgb(213, 11, 11), rgb(245, 226, 230));
+      background-size: 400% 400%;
       font-family: Arial, sans-serif;
     }
 
@@ -22,27 +22,53 @@
     }
 
     div {
-      border-style: inset;
-      border-width: small;
+      border-style: outset;
+      border-width: 17px;
+      border-color: rgb(208, 173, 173);
       padding: 5px;
+      background: linear-gradient(-45deg, rgb(242, 168, 168), rgb(236, 189, 199));
+      background-size: 100% 100%;
+      box-shadow: 9px 3px 5px;
+      margin: 35px;
     }
 
     p {
       text-align: center;
       font-family: Arial, sans-serif;
       margin: 20px;
+      margin-left: 350px;
+      margin-right: 350px;
+      
+    }
+
+    strong {
+      background: linear-gradient(-45deg, rgb(244, 178, 178), rgb(237, 212, 217));
+      border-style: outset;
+      border-width: 8px;
+      border-color: rgb(208, 173, 173);
+      padding: 5px;
+      box-shadow: 4px 3px 5px;
+      margin-bottom: 100px;
     }
 
     img {
-      border-width: 8px;
-      border-color: rgb(176, 176, 176);
-      border-style: inset;
+      border-style: outset;
+      border-width: 14px;
+      border-color: rgb(208, 173, 173);
       box-shadow: 9px 3px 5px;
     }
 
     button {
+      font-size: 150%;
+      background: linear-gradient(-45deg, rgb(244, 178, 178), rgb(237, 212, 217));
       margin: 0 auto;
       display: block;
+      border-style: outset;
+      border-width: 8px;
+      border-color: rgb(208, 173, 173);
+      box-shadow: 4px 3px 5px;
+      margin-bottom: 100px;
+      margin-top: 100px;
     }
   </style>
 </head>
@@ -57,7 +83,7 @@
     </h3>
     <br>
 
-    <div>
+  </div>
       <p>
         <img
           src="https://www.readspeaker.com/wp-content/uploads/TeacherChildren-1.jpg"
@@ -65,9 +91,19 @@
           width="500"
           height="333"
         />
-        <br />Image par: Erik Isakson
+        <br />Image par: <a href="https://erikisakson.com/New-Work/thumbs">Erik Isakson</a>
       </p>
-    </div>
+    <br>
+
+    <p>
+      <strong>Introduction</strong>
+      <br><br>
+      Les évolutions d'internet nous ont rendu le plus connecter de l’un à l’autre pour
+      toute personne. Les technologies modernes et internet nous donne plusieurs façons 
+      de se communiquer. Avec les cellulaires capables de communiquer simplement avec un 
+      bouton et des programmes qui aide des millions de personnes à être apte à utiliser
+      internet
+    </p>
     <br>
 
     <p>
@@ -111,21 +147,22 @@
       très connu qui utilisait ceci est Steven Hawking qui utilisait un
       programme qui utilisait TTS pour essentiellement être capable de parler.
     </p>
-  </div>
-  <script>
-    function infoBouton() {
-      let nom = prompt("Quel est ton nom ?");
-      let email = prompt("Quel est ton email ?");
-      alert("Merci " + nom + ", nous vous contacterons sous peu.");
+    <script>
+    function Bouton() {
+      let nom = prompt("Quel est votre nom et prenom?");
+      let email = prompt("Quel est votre adresse couriel?");
+      
+      alert("Merci!" + nom + ". Un couriel sera envoyer a" + email + "avec plus d'information sur le sujet.");
     }
 
     let cliqueMoi = document.querySelector("button");
-    cliqueMoi.addEventListener("click", infoBouton);
+    cliqueMoi.addEventListener("click", Bouton);
   </script>
 
-  <button type="button" onclick=infoBouton()>
+  <button type="button" onclick=Bouton()>
     En savoir plus!
   </button>
-
+  <p style="text-align: right;">Codé par: Dominic Empson</p>
 </body>
 </html>
+
